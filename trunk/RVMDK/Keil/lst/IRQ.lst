@@ -1,0 +1,165 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;/******************************************************
+                       ***********************/
+    2 00000000         ;/* IRQ.S: IRQ Handler                                  
+                                             */
+    3 00000000         ;/******************************************************
+                       ***********************/
+    4 00000000         ;/* This file is part of the uVision/ARM development too
+                       ls.                   */
+    5 00000000         ;/* Copyright (c) 2005-2006 Keil Software. All rights re
+                       served.               */
+    6 00000000         ;/* This software may only be used under the terms of a 
+                       valid, current,       */
+    7 00000000         ;/* end user licence from KEIL for a compatible version 
+                       of KEIL software      */
+    8 00000000         ;/* development tools. Nothing else gives you the right 
+                       to use this software. */
+    9 00000000         ;/******************************************************
+                       ***********************/
+   10 00000000         
+   11 00000000         
+   12 00000000         ; Vectored Interrupt Controller (VIC) definitions
+   13 00000000 FFFFF030 
+                       VectorAddr
+                               EQU              0xFFFFF030  ; VIC Vector Addres
+                                                            s Register
+   14 00000000 FC000030 
+                       VectorAddrDaisy
+                               EQU              0xFC000030  ; Daisy VIC Vector 
+                                                            Address Register
+   15 00000000         
+   16 00000000         
+   17 00000000                 AREA             IRQ, CODE, READONLY
+   18 00000000                 ARM
+   19 00000000         
+   20 00000000                 PRESERVE8
+   21 00000000                 ALIGN
+   22 00000000                 EXPORT           IRQHandler
+   23 00000000         
+   24 00000000         IRQHandler
+   25 00000000 E24EE004        SUB              LR, LR, #4  ; Update Link Regis
+                                                            ter
+   26 00000004 E92D5FFF        STMFD            SP!, {R0-R12, LR} ; Save Worksp
+                                                            ace & LR to Stack
+   27 00000008 E14F0000        MRS              R0, SPSR    ; Copy SPSR to R0
+   28 0000000C E92D0003        STMFD            SP!, {R0, R1} ; Save SPSR to St
+                                                            ack (8-byte)
+   29 00000010 E59F0044        LDR              R0, =VectorAddr
+   30 00000014 E5900000        LDR              R0, [R0]    ; Read the Routine 
+                                                            Address
+   31 00000018 E59F1040        LDR              R1, =VectorAddrDaisy
+   32 0000001C E5911000        LDR              R1, [R1]
+   33 00000020         ; Padding between the acknowledge and re-enable of inter
+                       rupts 
+   34 00000020         ; For more details, please refer to the following URL 
+   35 00000020         ; http://www.arm.com/support/faqip/3682.html 
+   36 00000020 E1A00000        NOP
+   37 00000024 E1A00000        NOP
+   38 00000028 E321F01F        MSR              CPSR_c, #0x1F ; Switch to SYS M
+                                                            ode and enable IRQ 
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                                                            
+   39 0000002C E92D4001        STMFD            SP!, {R0, LR} ; Save Link Regis
+                                                            ter (8-byte Stack)
+   40 00000030 E59FE02C        LDR              LR, =IRQReturnAddress ; Read th
+                                                            e Return Address
+   41 00000034 E12FFF10        BX               R0          ; Branch to the IRQ
+                                                             Handler
+   42 00000038         IRQReturnAddress
+   43 00000038 E8BD4001        LDMFD            SP!, {R0, LR} ; Restore Link Re
+                                                            gister (8-byte Stac
+                                                            k)
+   44 0000003C E321F0D2        MSR              CPSR_c, #0xD2 ; Switch to IRQ M
+                                                            ode
+   45 00000040 E59F0014        LDR              R0, =VectorAddr ; Write to the 
+                                                            VectorAddress to cl
+                                                            ear 
+   46 00000044 E5800000        STR              R0, [R0]    ; the respective In
+                                                            terrupt
+   47 00000048 E59F1010        LDR              R1, =VectorAddrDaisy ; Write to
+                                                             the VectorAddressD
+                                                            aisy to
+   48 0000004C E5811000        STR              R1, [R1]    ; clear the respect
+                                                            ive Interrupt
+   49 00000050 E8BD0003        LDMFD            SP!, {R0, R1} ; Restore SPSR to
+                                                             R0
+   50 00000054 E16FF000        MSR              SPSR_cxsf, R0 ; Restore SPSR
+   51 00000058 E8FD9FFF        LDMFD            SP!, {R0-R12, PC}^ 
+                                                            ; Return to program
+                                                            
+   52 0000005C         
+   53 0000005C         
+   54 0000005C                 END
+              FFFFF030 
+              FC000030 
+              00000000 
+Command Line: --debug --xref --device=DARMST9 -o.\FLASH\IRQ.o -IC:\Keil\ARM\INC
+\ST\91x --list=.\lst\IRQ.lst IRQ.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+IRQ 00000000
+
+Symbol: IRQ
+   Definitions
+      At line 17 in file IRQ.s
+   Uses
+      None
+Comment: IRQ unused
+IRQHandler 00000000
+
+Symbol: IRQHandler
+   Definitions
+      At line 24 in file IRQ.s
+   Uses
+      At line 22 in file IRQ.s
+Comment: IRQHandler used once
+IRQReturnAddress 00000038
+
+Symbol: IRQReturnAddress
+   Definitions
+      At line 42 in file IRQ.s
+   Uses
+      At line 40 in file IRQ.s
+Comment: IRQReturnAddress used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+VectorAddr FFFFF030
+
+Symbol: VectorAddr
+   Definitions
+      At line 13 in file IRQ.s
+   Uses
+      At line 29 in file IRQ.s
+      At line 45 in file IRQ.s
+
+VectorAddrDaisy FC000030
+
+Symbol: VectorAddrDaisy
+   Definitions
+      At line 14 in file IRQ.s
+   Uses
+      At line 31 in file IRQ.s
+      At line 47 in file IRQ.s
+
+2 symbols
+322 symbols in table

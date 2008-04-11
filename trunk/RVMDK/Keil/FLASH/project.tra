@@ -1,0 +1,67 @@
+*** Creating Trace Output File '.\FLASH\project.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\flash\str91x.o"'
+### List of Objects: adding '".\flash\swi.o"'
+### List of Objects: adding '".\flash\undef.o"'
+### List of Objects: adding '".\flash\dabt.o"'
+### List of Objects: adding '".\flash\fiq.o"'
+### List of Objects: adding '".\flash\irq.o"'
+### List of Objects: adding '".\flash\pabt.o"'
+### List of Objects: adding '".\flash\91x_adc.o"'
+### List of Objects: adding '".\flash\91x_ahbapb.o"'
+### List of Objects: adding '".\flash\91x_can.o"'
+### List of Objects: adding '".\flash\91x_dma.o"'
+### List of Objects: adding '".\flash\91x_emi.o"'
+### List of Objects: adding '".\flash\91x_fmi.o"'
+### List of Objects: adding '".\flash\91x_gpio.o"'
+### List of Objects: adding '".\flash\91x_i2c.o"'
+### List of Objects: adding '".\flash\91x_lib.o"'
+### List of Objects: adding '".\flash\91x_mc.o"'
+### List of Objects: adding '".\flash\91x_rtc.o"'
+### List of Objects: adding '".\flash\91x_scu.o"'
+### List of Objects: adding '".\flash\91x_ssp.o"'
+### List of Objects: adding '".\flash\91x_tim.o"'
+### List of Objects: adding '".\flash\91x_uart.o"'
+### List of Objects: adding '".\flash\91x_vic.o"'
+### List of Objects: adding '".\flash\91x_wdg.o"'
+### List of Objects: adding '".\flash\91x_wiu.o"'
+### List of Objects: adding '".\flash\lcd_str912.o"'
+### List of Objects: adding '".\flash\lcd_debug.o"'
+### List of Objects: adding '".\flash\lcd_terrain.o"'
+### List of Objects: adding '".\flash\i2c.o"'
+### List of Objects: adding '".\flash\flash.o"'
+### List of Objects: adding '".\flash\terminal.o"'
+### List of Objects: adding '".\flash\serial_message.o"'
+### List of Objects: adding '".\flash\memory.o"'
+### List of Objects: adding '".\flash\main.o"'
+### List of Objects: adding '".\flash\91x_it.o"'
+### List of Objects: adding '".\flash\divers.o"'
+### List of Objects: adding '".\flash\config.o"'
+### List of Objects: adding '".\flash\log.o"'
+### List of Objects: adding '".\flash\pathfinding.o"'
+### List of Objects: adding '".\flash\maths.o"'
+### List of Objects: adding '".\flash\robot_propre.o"'
+### List of Objects: adding '".\flash\servo.o"'
+### List of Objects: adding '".\flash\barillet.o"'
+### List of Objects: adding '".\flash\deplacement.o"'
+### List of Objects: adding '".\flash\mouvement.o"'
+### List of Objects: adding '".\flash\positions.o"'
+### List of Objects: adding '".\flash\strategie.o"'
+### List of Objects: adding '".\flash\pobeye.o"'
+### List of Objects: adding '".\flash\ir.o"'
+### ADS-LD Command completed:
+".\flash\str91x.o" ".\flash\swi.o" ".\flash\undef.o" ".\flash\dabt.o" ".\flash\fiq.o" ".\flash\irq.o" ".\flash\pabt.o" ".\flash\91x_adc.o" ".\flash\91x_ahbapb.o" ".\flash\91x_can.o" ".\flash\91x_dma.o" ".\flash\91x_emi.o" ".\flash\91x_fmi.o" ".\flash\91x_gpio.o" ".\flash\91x_i2c.o" ".\flash\91x_lib.o" ".\flash\91x_mc.o" ".\flash\91x_rtc.o" ".\flash\91x_scu.o" ".\flash\91x_ssp.o" ".\flash\91x_tim.o" ".\flash\91x_uart.o" ".\flash\91x_vic.o" ".\flash\91x_wdg.o" ".\flash\91x_wiu.o" ".\flash\lcd_str912.o" ".\flash\lcd_debug.o" ".\flash\lcd_terrain.o" ".\flash\i2c.o" ".\flash\flash.o" ".\flash\terminal.o" ".\flash\serial_message.o" ".\flash\memory.o" ".\flash\main.o" ".\flash\91x_it.o" ".\flash\divers.o" ".\flash\config.o" ".\flash\log.o" ".\flash\pathfinding.o" ".\flash\maths.o" ".\flash\robot_propre.o" ".\flash\servo.o" ".\flash\barillet.o" ".\flash\deplacement.o" ".\flash\mouvement.o" ".\flash\positions.o" ".\flash\strategie.o" ".\flash\pobeye.o" ".\flash\ir.o" --scatter ".\FLASH\project.sct" 
+--map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\lst\project.map" -o ".\FLASH\project.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\FLASH\project.axf'
+### ADS-LD Command File: '.\FLASH\project.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\FLASH\project.lnp', Handle=0x000002C0
+### Writing '.lnp' file
+### ADS-LD Command file '.\FLASH\project.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
