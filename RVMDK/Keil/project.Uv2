@@ -1,0 +1,240 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+Target (STR912 FLASH), 0x0004 // Tools: 'ARM-ADS'
+Target (STR910 RAM), 0x0004 // Tools: 'ARM-ADS'
+
+Group (startup)
+Group (library low level)
+Group (library high level)
+Group (sources)
+Group (pathfinding)
+Group (actions)
+Group (capteurs)
+
+File 1,2,<.\STR91x.s><STR91x.s> 0x47A5E6A4 
+File 1,2,<.\SWI.s><SWI.s> 0x46572AF0 
+File 1,2,<.\Undef.s><Undef.s> 0x46572AF0 
+File 1,2,<.\DAbt.s><DAbt.s> 0x46572AF0 
+File 1,2,<.\FIQ.s><FIQ.s> 0x46572AF0 
+File 1,2,<.\IRQ.s><IRQ.s> 0x46572AF0 
+File 1,2,<.\PAbt.s><PAbt.s> 0x46572AF0 
+File 2,1,<..\..\library\src\91x_adc.c><91x_adc.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_ahbapb.c><91x_ahbapb.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_can.c><91x_can.c> 0x47B1A454 
+File 2,1,<..\..\library\src\91x_dma.c><91x_dma.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_emi.c><91x_emi.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_fmi.c><91x_fmi.c> 0x47B46FA6 
+File 2,1,<..\..\library\src\91x_gpio.c><91x_gpio.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_i2c.c><91x_i2c.c> 0x47F7BE56 
+File 2,1,<..\..\library\src\91x_lib.c><91x_lib.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_mc.c><91x_mc.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_rtc.c><91x_rtc.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_scu.c><91x_scu.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_ssp.c><91x_ssp.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_tim.c><91x_tim.c> 0x4794D878 
+File 2,1,<..\..\library\src\91x_uart.c><91x_uart.c> 0x47B5CF0A 
+File 2,1,<..\..\library\src\91x_vic.c><91x_vic.c> 0x4794F3FE 
+File 2,1,<..\..\library\src\91x_wdg.c><91x_wdg.c> 0x46572AEE 
+File 2,1,<..\..\library\src\91x_wiu.c><91x_wiu.c> 0x46572AEE 
+File 2,1,<..\..\library\src\lcd_STR912.c><lcd_STR912.c> 0x47E7BF52 
+File 3,1,<..\..\library\src\LCD_Debug.c><LCD_Debug.c> 0x47FDAAF3 
+File 3,1,<..\..\library\src\LCD_Terrain.c><LCD_Terrain.c> 0x4796027E 
+File 3,1,<..\..\library\src\I2C.c><I2C.c> 0x47F479C6 
+File 3,1,<..\..\library\src\flash.c><flash.c> 0x47B486FE 
+File 3,1,<..\..\library\src\terminal.c><terminal.c> 0x47F7B2FE 
+File 3,1,<..\..\library\src\serial_message.c><serial_message.c> 0x47F7CB5A 
+File 3,1,<..\..\library\src\memory.c><memory.c> 0x47F7BAEE 
+File 4,1,<..\main.c><main.c> 0x47F7C6A0 
+File 4,1,<..\91x_it.c><91x_it.c> 0x47FDAFB6 
+File 4,5,<..\..\library\inc\declare.h><declare.h> 0x47F5CF3A 
+File 4,1,<..\..\library\src\divers.c><divers.c> 0x47F08222 
+File 4,1,<..\..\library\src\config.c><config.c> 0x47FDABAF 
+File 4,1,<..\..\library\src\log.c><log.c> 0x47F7B476 
+File 5,1,<..\..\library\src\pathfinding.c><pathfinding.c> 0x47F47DCA 
+File 5,1,<..\..\library\src\maths.c><maths.c> 0x47C08294 
+File 5,1,<..\..\library\src\Robot_propre.c><Robot_propre.c> 0x47A8A8D8 
+File 6,1,<..\..\library\src\servo.c><servo.c> 0x47F476AA 
+File 6,1,<..\..\library\src\barillet.c><barillet.c> 0x47F4796C 
+File 6,1,<..\..\library\src\deplacement.c><deplacement.c> 0x47F326AC 
+File 6,1,<..\..\library\src\mouvement.c><mouvement.c> 0x47F5C84E 
+File 6,1,<..\..\library\src\positions.c><positions.c> 0x47F5D092 
+File 6,1,<..\..\library\src\strategie.c><strategie.c> 0x47F760D0 
+File 7,1,<..\..\library\src\pobeye.c><pobeye.c> 0x47FDAE28 
+File 7,1,<..\..\library\src\IR.c><IR.c> 0x47FD077E 
+
+
+Options 1,0,0  // Target 'STR912 FLASH'
+ Device (STR912FW44)
+ Vendor (STMicroelectronics)
+ Cpu (IRAM(0x04000000-0x04017FFF) IROM(0x0-0x87FFF) CLOCK(25000000) CPUTYPE(ARM9E))
+ FlashUt ()
+ StupF ("STARTUP\ST\STR91x.s" ("STR91x Startup Code"))
+ FlashDR (UL2ARM(-UU0639C7E -O15 -S0 -C1 -N00("ST uPSD Flash") -D00(04570041) -L00(8) -N01("ARM966E-S Core") -D01(25966041) -L01(4) -N02("ST Boundary Scan") -D02(0457F041) -L02(5) -FO15 -FD4000000 -FC800 -FN1 -FF0STR91xFxx4 -FS00 -FL088000))
+ DevID (4067)
+ Rgf (91x_lib.H)
+ Mem ()
+ C ()
+ A ()
+ RL ()
+ OH ()
+ DBC_IFX ()
+ DBC_CMS ()
+ DBC_AMS ()
+ DBC_LMS ()
+ UseEnv=0
+ EnvBin ()
+ EnvInc ()
+ EnvLib ()
+ EnvReg (ÿST\91x\)
+ OrgReg (ÿST\91x\)
+ TgStat=16
+ OutDir (.\FLASH\)
+ OutName (project)
+ GenApp=1
+ GenLib=0
+ GenHex=1
+ Debug=1
+ Browse=1
+ LstDir (.\lst\)
+ HexSel=1
+ MG32K=0
+ TGMORE=0
+ RunUsr 0 1 <"C:\Keil\Projects\Test LCD\RVMDK\Keil\FLASH\bin2.bat">
+ RunUsr 1 0 <>
+ BrunUsr 0 0 <>
+ BrunUsr 1 0 <>
+ SVCSID <>
+ GLFLAGS=3838
+ ADSFLGA { 243,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ACPUTYP (ARM9E)
+ ADSTFLGA { 0,12,0,2,99,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSOCM { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSIRAM { 0,0,0,0,4,0,128,1,0 }
+ OCMADSIROM { 1,0,0,0,0,0,128,8,0 }
+ OCMADSXRAM { 0,0,0,0,0,0,0,0,0 }
+ OCR_RVCT { 1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,128,8,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,128,1,0,0,0,0,0,0,0,0,0,0 }
+ RV_STAVEC ()
+ ADSCCFLG { 8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSCMISC ()
+ ADSCDEFN ()
+ ADSCUDEF ()
+ ADSCINCD (..\..\project;..\..\library\inc)
+ ADSASFLG { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSAMISC ()
+ ADSADEFN ()
+ ADSAUDEF ()
+ ADSAINCD ()
+ PropFld { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IncBld=1
+ AlwaysBuild=0
+ GenAsm=0
+ AsmAsm=0
+ PublicsOnly=0
+ StopCode=3
+ CustArgs ()
+ LibMods ()
+ ADSLDFG { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSLDTA (0x00000000)
+ ADSLDDA (0x04000000)
+ ADSLDSC ()
+ ADSLDIB ()
+ ADSLDIC ()
+ ADSLDMC ()
+ ADSLDIF ()
+ ADSLDDW ()
+  OPTDL (SARM.DLL)(-cSTR91x)(DARMST9.DLL)(-pSTR912)(SARM.DLL)(-cSTR91x)(TARMST9.DLL)(-pSTR912)
+  OPTDBG 179197,0,()()()()()()()()()() (BIN\UL2ARM.DLL)()()()
+ FLASH1 { 10,0,0,0,1,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0 }
+ FLASH2 (BIN\AGDIRDI.DLL)
+ FLASH3 ("C:\Keil\OpenOCD\openocd\bin\openocd-ftd2xx.exe" (-f "C:\Keil\Projects\Test LCD\RVMDK\str9_ft2232.cfg"))
+ FLASH4 ()
+EndOpt
+
+Options 2,0,0  // Target 'STR910 RAM'
+ Device (STR912FW44)
+ Vendor (STMicroelectronics)
+ Cpu (IRAM(0x04000000-0x04017FFF) IROM(0x0-0x87FFF) CLOCK(25000000) CPUTYPE(ARM9E))
+ FlashUt ()
+ StupF ("STARTUP\ST\STR91x.s" ("STR91x Startup Code"))
+ FlashDR (UL2ARM(-UU0639C7E -O15 -S0 -C1 -N00("ST uPSD Flash") -D00(04570041) -L00(8) -N01("ARM966E-S Core") -D01(25966041) -L01(4) -N02("ST Boundary Scan") -D02(0457F041) -L02(5) -FO15 -FD4000000 -FC800 -FN1 -FF0STR91xFxx4 -FS00 -FL088000))
+ DevID (4067)
+ Rgf (91x_lib.H)
+ Mem ()
+ C ()
+ A ()
+ RL ()
+ OH ()
+ DBC_IFX ()
+ DBC_CMS ()
+ DBC_AMS ()
+ DBC_LMS ()
+ UseEnv=0
+ EnvBin ()
+ EnvInc ()
+ EnvLib ()
+ EnvReg (ÿST\91x\)
+ OrgReg (ÿST\91x\)
+ TgStat=16
+ OutDir (.\RAM\)
+ OutName (project)
+ GenApp=1
+ GenLib=0
+ GenHex=0
+ Debug=1
+ Browse=1
+ LstDir (.\lst\)
+ HexSel=1
+ MG32K=0
+ TGMORE=0
+ RunUsr 0 0 <>
+ RunUsr 1 0 <>
+ BrunUsr 0 0 <>
+ BrunUsr 1 0 <>
+ SVCSID <>
+ GLFLAGS=1790
+ ADSFLGA { 242,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ACPUTYP (ARM9E)
+ ADSTFLGA { 0,12,0,2,99,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSOCM { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSIRAM { 0,0,0,0,4,0,128,1,0 }
+ OCMADSIROM { 1,0,0,0,0,0,128,8,0 }
+ OCMADSXRAM { 0,0,0,0,0,0,0,0,0 }
+ OCR_RVCT { 1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,4,0,128,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,128,0,4,0,0,1,0,0,0,0,0,0,0,0,0,0 }
+ RV_STAVEC ()
+ ADSCCFLG { 5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSCMISC ()
+ ADSCDEFN ()
+ ADSCUDEF ()
+ ADSCINCD (..\..\project;..\..\library\inc)
+ ADSASFLG { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSAMISC ()
+ ADSADEFN ()
+ ADSAUDEF ()
+ ADSAINCD ()
+ PropFld { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IncBld=1
+ AlwaysBuild=0
+ GenAsm=0
+ AsmAsm=0
+ PublicsOnly=0
+ StopCode=3
+ CustArgs ()
+ LibMods ()
+ ADSLDFG { 17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSLDTA (0x04000000)
+ ADSLDDA (0x04008000)
+ ADSLDSC ()
+ ADSLDIB ()
+ ADSLDIC ()
+ ADSLDMC ()
+ ADSLDIF ()
+ ADSLDDW ()
+  OPTDL (SARM.DLL)(-cSTR91x)(DARMST9.DLL)(-pSTR912)(SARM.DLL)(-cSTR91x)(TARMST9.DLL)(-pSTR912)
+  OPTDBG 49150,0,()()()()()()()()()(.\RAM.ini) (BIN\UL2ARM.DLL)()()()
+ FLASH1 { 1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ FLASH2 (BIN\UL2ARM.DLL)
+ FLASH3 ("" ())
+ FLASH4 ()
+EndOpt
+

@@ -1,0 +1,9 @@
+
+poll on
+wait_halt
+str9x flash_config 4 2 0 0x80000
+flash protect 0 0 7 off
+flash erase 0 0 7
+flash write 0 "C:\Keil\Projects\Test LCD\RVMDK\Keil\FLASH\project.bin" 0
+reset run
+shutdown

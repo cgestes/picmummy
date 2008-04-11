@@ -1,0 +1,1 @@
+-c --device DARMST9 -g -O1 -I..\..\project -I..\..\library\inc -I "C:\Keil\ARM\INC\ST\91x" -o ".\FLASH\config.o" "..\..\library\src\config.c"
