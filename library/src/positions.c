@@ -7,7 +7,7 @@
 
 #include "91x_lib.h"
 
-/* Calcul des positions selon la couleur du robot 
+/* Calcul des positions selon la couleur du robot
    Tout est calculé pour le départ ROUGE. On fait une symétrie pour
    obteninr les positions Bleues.
    Toutes les positions sont mises dans un tableau "Global" */
@@ -27,11 +27,12 @@
 
 #define RESERVOIR_BLANC_TEAM	8
 #define RESERVOIR_BLANC_ADVERSE	9
-#define RESERVOIR_TEAM			10
+#define RESERVOIR_TEAM		10
 
-#define	LARGAGE_2_3	11
-#define	LARGAGE_3_3	12
-#define LARGAGE_1_3	13
+#define LARGAGE_1_3	11
+#define	LARGAGE_2_3	12
+#define	LARGAGE_3_3	13
+
 
 #define DEFENSE_P0	14
 #define DEFENSE_P1	15

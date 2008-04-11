@@ -78,6 +78,19 @@
 #define ADVERSE_X_KEY				34
 #define ADVERSE_Y_KEY				35
 
+/* container state */
+#define CONTAINER_KEY               36
+
+/* useless define, only needed to avoid other to use those key */
+#define CONTAINER_TEAM_KEY			36
+#define CONTAINER_NTEAM_KEY			37
+#define CONTAINER_WHITE1_KEY		38
+#define CONTAINER_WHITE2_KEY		39
+
+/* the floor is not really a container, no matter */
+#define CONTAINER_FLOOR_KEY         40
+
+#define LAST_EXPULSED_KEY           41
 
 
 
@@ -116,6 +129,13 @@ int read_Memory_Sizeof(int pMemoryKey, int pWait);
 void write_Memory_Sizeof(int pMemoryKey, int pValue);
 
 int Get_Update_Memory(int pMemoryKey);
+
+#define mget(a) read_Memory_Sizeof(a, MEMORY_WAIT)
+#define mset(a, b) read_Memory_Sizeof(a, b)
+
+#define mgeta(a, i) read_Memory(a, i, MEMORY_WAIT)
+#define mseta(a, i, b) read_Memory(a, i, b)
+
 
 #endif // _MEMORY_H
 
