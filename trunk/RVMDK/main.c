@@ -9,7 +9,7 @@
 *******************************************************************************/
 
 #include "91x_lib.h"
-#include "declare.h" // déclaration des variables globales
+#include "declare.h" // dÃ©claration des variables globales
 
 
 #ifdef LOG_MAIN
@@ -26,7 +26,7 @@
 	initialisation ();
 	Init_PathFinding();
 
-	//Depart(); //procédure de départ avec le jack	
+	//Depart(); //procÃ©dure de dÃ©part avec le jack	
 	Position_Depart.X = 45;
 	Position_Depart.Y = 45;
 	Position_Destination.X = 255;

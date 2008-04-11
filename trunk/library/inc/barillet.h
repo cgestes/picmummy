@@ -116,7 +116,11 @@ int BarGet_Bloquer(void);
 void Barillet_MachineEtat(void);
 int BarBalle_RemoveArriere(int pPos, int pCoul);
 
-
+/* strategic function */
+bool bar_Empty();
+bool bar_Full();
+void bar_FindEmptyPos();
+void bar_Expulse();
 
 
 

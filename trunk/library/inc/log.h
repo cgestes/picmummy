@@ -14,6 +14,9 @@
 #define LOG_TIMER
 #define LOG_MAIN
 
+//#define LOG_ACTIVE LOG_TIMER || LOG_MAIN 
+//void LOG(char section, const char *format, ...)
+
 /* this is the real debug function */
 void d(const char *format, ...);
 
